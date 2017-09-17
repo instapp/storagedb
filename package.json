@@ -1,0 +1,32 @@
+{
+  "name": "storagedb",
+  "version": "1.0.0",
+  "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instapp/storagedb.git"
+  },
+  "keywords": [
+    "storagedb",
+    "localStorage",
+    "sessionStorage",
+    "storage"
+  ],
+  "author": "Acathur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/instapp/storagedb/issues"
+  },
+  "homepage": "https://github.com/instapp/storagedb#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.6.0"
+  }
+}
