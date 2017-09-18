@@ -7,6 +7,15 @@ MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)
 
 > ***NOTICE***: The npm package name is '**storagedb2**'
 
+## Features
+
+- MongoDB-like API design
+- Lightweight, only ***3KB*** (minified and gzipped)
+- No dependencies
+- Easy configuration
+- Well-supported query selectors (`$gt`,`$in`, ...) and options (`skip`, `limit`, `sort`)
+- Automatically cache in memory
+
 ## Getting started
 
 ### Install
@@ -17,10 +26,10 @@ npm install --save storagedb2
 
 Import storagedb to your project (ES6)
 ```js
-import storagedb from 'storagedb2'
+import StorageDB from 'storagedb2'
 ```
 
-or add to html file
+Or add the script to your main HTML file
 ```html
 <script src="./lib/storagedb.js"></script>
 ```
@@ -75,7 +84,7 @@ Users.insert([{
 Users.find([100, 102])
 
 Users.find({
-    name: /y$/
+    name: /y$/,
     age: {
         $gte: 20
     }
