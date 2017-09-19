@@ -185,6 +185,7 @@ class Collection {
 		let id = isObject(query) ? null : query
 		let queryFields = (query) ? Object.keys(query) : []
 		let quickTarget = false
+		let needsSort = !!opts.sort
 		let filterOpts = {
 			type: opts._filterType || 'data',
 			multi: false
@@ -206,12 +207,23 @@ class Collection {
 
 		} else if (queryFields.length) {
 			// by query
-			data = this._filter((key, val) => {
-				return queryMatch(query, val)
-			}, filterOpts)
-
+			if (needsSort) {
+				data = this.find(query, opts)
+			} else {
+				data = this._filter((key, val) => {
+					return queryMatch(query, val)
+				}, filterOpts)
+			}
 		} else {
-			data = this._filter(null, filterOpts)
+			if (needsSort) {
+				data = this.find(query, opts)
+			} else {
+				data = this._filter(null, filterOpts)
+			}
+		}
+
+		if (!id && needsSort && data) {
+			data = data[0] || null
 		}
 
 		return data

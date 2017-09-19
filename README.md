@@ -9,7 +9,7 @@ MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)
 
 ## Features
 
-- MongoDB-like API design
+- MongoDB-like API
 - Lightweight, only ***3KB*** (minified and gzipped)
 - No dependencies
 - Easy configuration
