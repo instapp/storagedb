@@ -1,4 +1,5 @@
 import ID from './id'
+import MockStorage from './mock-storage'
 import isObject from './utils/is-object'
 import queryMatch from './utils/query-match'
 import sortCompare from './utils/sort-compare'
@@ -8,11 +9,11 @@ class Collection {
 		opts = opts || {}
 
 		this.name = name
-		this.storage = db.storage
+		this.storage = db.storage || new MockStorage()
 		this.path = db.database + db.sep + name + db.sep
 		this.primaryKey = opts.primaryKey || db.primaryKey
-		this.cache = null
-		this.cacheable = false
+		this.cache = {}
+		this.cacheable = !db.storage
 	}
 
 

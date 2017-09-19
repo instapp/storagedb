@@ -1,6 +1,6 @@
 {
   "name": "storagedb2",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
   "main": "lib/index.js",
   "scripts": {

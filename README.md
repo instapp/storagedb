@@ -49,7 +49,7 @@ Or add the script to your main HTML file
 
 ```js
 const db = new StorageDB({
-    storage: window.localStorage,     // storage object, default is window.localStorage
+    storage: window.localStorage,     // storage object, default is window.localStorage. If you want to store data in memory only, you can set it null
     database: 'testdb',               // database name, default is 'db'
     primaryKey: 'id'                  // primary key of collection, default is '_id'
 })

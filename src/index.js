@@ -1,3 +1,4 @@
+import isSupported from './utils/is-supported'
 import Collection from './collection'
 
 class StorageDB {
@@ -8,6 +9,10 @@ class StorageDB {
 		this.database = opts.database || 'db'
 		this.primaryKey = opts.primaryKey || '_id'
 		this.sep = opts.sep || ':'
+
+		if (!isSupported(this.storage)) {
+			this.storage = null
+		}
 	}
 
 	get (name, opts) {
