@@ -1,8 +1,8 @@
 {
   "name": "storagedb2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "MongoDB-like API for HTML5 Storage (localStorage and sessionStorage)",
-  "main": "lib/index.js",
+  "main": "lib/storagedb.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
